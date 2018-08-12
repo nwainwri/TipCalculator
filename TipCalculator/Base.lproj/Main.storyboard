@@ -18,17 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter Bill Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AL0-1O-k9W">
-                                <rect key="frame" x="98" y="69" width="178" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter Bill Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AL0-1O-k9W">
+                                <rect key="frame" x="97" y="187" width="180" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7X-XO-61u">
-                                <rect key="frame" x="145" y="158" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="CALCULATE">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7X-XO-61u">
+                                <rect key="frame" x="97" y="263" width="180" height="30"/>
+                                <state key="normal" title="CLICK TO TIP">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -36,22 +34,37 @@
                                     <action selector="calculateTipPercentage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y5J-5i-6w3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tipAmountLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eO-gp-SVe">
-                                <rect key="frame" x="127" y="226" width="121" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter Tip Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DUt-R4-j4O">
-                                <rect key="frame" x="79" y="297" width="225" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter Tip Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DUt-R4-j4O">
+                                <rect key="frame" x="97" y="225" width="180" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eO-gp-SVe">
+                                <rect key="frame" x="97" y="301" width="180" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DUt-R4-j4O" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1al-SN-K5r"/>
+                            <constraint firstItem="z7X-XO-61u" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="32t-r0-CXB"/>
+                            <constraint firstItem="6eO-gp-SVe" firstAttribute="top" secondItem="z7X-XO-61u" secondAttribute="bottom" constant="8" id="8ZP-Nc-li9"/>
+                            <constraint firstAttribute="trailing" secondItem="6eO-gp-SVe" secondAttribute="trailing" constant="98" id="LqA-Tb-s6R"/>
+                            <constraint firstAttribute="trailing" secondItem="z7X-XO-61u" secondAttribute="trailing" constant="98" id="ObW-cg-4kh"/>
+                            <constraint firstItem="6eO-gp-SVe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VCH-zT-Ruj"/>
+                            <constraint firstItem="z7X-XO-61u" firstAttribute="width" secondItem="AL0-1O-k9W" secondAttribute="width" id="WDJ-uv-P2j"/>
+                            <constraint firstItem="DUt-R4-j4O" firstAttribute="top" secondItem="AL0-1O-k9W" secondAttribute="bottom" constant="8" id="Wlq-TT-a11"/>
+                            <constraint firstAttribute="trailing" secondItem="AL0-1O-k9W" secondAttribute="trailing" constant="98" id="YjW-BF-KIw"/>
+                            <constraint firstItem="AL0-1O-k9W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="167" id="Z2f-vx-asD"/>
+                            <constraint firstAttribute="trailing" secondItem="DUt-R4-j4O" secondAttribute="trailing" constant="98" id="oXq-IK-MzM"/>
+                            <constraint firstItem="z7X-XO-61u" firstAttribute="top" secondItem="DUt-R4-j4O" secondAttribute="bottom" constant="8" id="qj5-ag-dpg"/>
+                            <constraint firstItem="AL0-1O-k9W" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="txw-hx-1ZG"/>
+                            <constraint firstItem="DUt-R4-j4O" firstAttribute="width" secondItem="AL0-1O-k9W" secondAttribute="width" id="v4v-yy-OY1"/>
+                            <constraint firstItem="6eO-gp-SVe" firstAttribute="width" secondItem="AL0-1O-k9W" secondAttribute="width" id="whD-dr-GhR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>

@@ -37,12 +37,15 @@
     numberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
     [numberFormatter setMaximumFractionDigits:2]; // sets max number of decimal places to two, kinda needed for dollars
     numberFormatter.usesGroupingSeparator = YES;
+    NSLog(@"TEST billamount: %@", self.billAmountTextField.text);
     NSDecimalNumber *billAmount = [[NSDecimalNumber alloc] initWithString:self.billAmountTextField.text]; // converts amount from slider into working float number
     
     NSDecimalNumber *tipPercentage = [[NSDecimalNumber alloc] initWithString:self.tipPercentageTextField.text]; // converts text (number) from field into working float number
-    NSDecimalNumber *decimalNumber = [[NSDecimalNumber alloc] initWithInt:10]; // so that I can convert 15 into "0.15" for percentage.
-    tipPercentage = [tipPercentage decimalNumberByDividingBy:decimalNumber];
-    NSDecimalNumber *totalBill = [billAmount decimalNumberByMultiplyingBy:tipPercentage]; // calculation to split amounts.
+    NSLog(@"TEST tippercent: %@", self.tipPercentageTextField.text);
+//    NSDecimalNumber *decimalNumber = [[NSDecimalNumber alloc] initWithInt:10]; // so that I can convert 15 into "0.15" for percentage.
+//    NSLog(@"TEST decimal number: %@", decimalNumber);
+//    tipPercentage = [tipPercentage decimalNumberByDividingBy:decimalNumber];
+    NSDecimalNumber *totalBill = [billAmount decimalNumberByDividingBy:tipPercentage]; // calculation to split amounts.
     self.tipAmountLabel.text = [NSString stringWithFormat:@"%@", [numberFormatter stringForObjectValue:totalBill]]; // returns value to text field.
     
     
